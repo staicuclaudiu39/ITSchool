@@ -1,0 +1,100 @@
+.div1 {
+    background-color: beige;
+    margin: auto;
+    width: 50%;
+    border-radius: 5%;
+    border-color: black;
+    border-style: solid;
+}
+
+.div_img img {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    -webkit-box-shadow: -15px 10px 38px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -15px 10px 38px -1px rgba(0,0,0,0.75);
+    box-shadow: -15px 10px 38px -1px rgba(0,0,0,0.75);
+}
+
+.p1 {
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 40px;
+    color: red;
+}
+
+.p1 p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.p2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+    color: turquoise;
+    margin-bottom: 40px;
+}
+
+.p2 input {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.robot {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.robot p {
+    margin: 0;
+}
+
+.submit {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.submit p{
+    font-size: 30px;
+    color: red;
+}
+
+.submit img {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    width: 300px;
+
+}
+
+.submit button {
+    background-color: aqua;
+    font-size: 25px;
+    border-radius: 12%;
+}
+
+.submit button:hover {
+    background-color: red;
+}
+
+.submit button:hover + .hidden {
+    display: block;
+}

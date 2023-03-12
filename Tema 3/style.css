@@ -1,0 +1,97 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.eventBox {
+    display: flex;
+    border-style: solid;
+    width: 500px;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: antiquewhite;
+    position: relative;
+}
+
+.imgImpar {
+    width: 200px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 40%;
+    border-left: 2px solid blue;
+    border-top: 2px solid blue;
+    border-bottom: 2px solid orange;
+    border-right: 2px solid orange;
+
+}
+
+.imgPar {
+    width: 200px;
+    height: 120px;
+    margin-top: 30px;
+    margin-left: 30px;
+    border-radius: 40%;
+    border-left: 2px solid orange; 
+    border-top: 2px solid orange;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+}
+
+
+.text {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.eventTitle {
+    font-weight: bold;
+}
+
+.date {
+    position: relative;
+    
+}
+
+.date::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 60px;
+    height: 1px;
+    background-color: black;
+}
+
+.readMore {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-left: 140px;
+    height: 40px;
+    width: 40%;
+    background-color: cadetblue;
+    font-size: 22px;
+    border-radius: 12%;
+    border: none;
+}
+
+.allEvents {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    border-style: solid;
+    background-color: bisque;
+}
+
+@media only screen and (max-width: 600px) {
+    .allEvents {
+        flex-direction: column;
+    }
+}

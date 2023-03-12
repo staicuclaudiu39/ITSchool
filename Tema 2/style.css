@@ -1,0 +1,148 @@
+.div_impar {
+    width: 300px;
+    height: 400px;
+    border: solid;
+    margin: auto;
+    width: 20%;
+    margin-top: 20px;
+    text-align: center;
+    right: 0;
+    position: relative;
+    animation: left_animation 3s;
+}
+
+@keyframes left_animation {
+    0% {
+        right: 40%;
+    }
+    
+    100% {
+        right: 0;
+    }
+}
+
+.div_impar img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.div_impar p1 {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+
+.div_impar p1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    width: 100px;
+    height: 1px;
+    background-color: black;
+}
+
+.div_impar p2 {
+    font-size: 25px;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+}
+
+.div_impar p2::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    border: 2px solid black;
+}
+
+.div_par {
+    width: 300px;
+    height: 400px;
+    border: solid;
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    animation: right_animation 3s;
+}
+
+@keyframes right_animation {
+    0% {
+        left: 40%;
+    }
+    
+    100% {
+        left: 0;
+    }
+    
+}
+
+.div_par img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.div_par p1 {
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+
+.div_par p1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    width: 100px;
+    height: 1px;
+    background-color: black;
+}
+
+.div_par p2 {
+    font-size: 25px;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+}
+
+.div_par p2::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    border: 2px solid black;
+}
+
+.fixed_button {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    padding: 10px 10px;
+    background-color: beige;
+    border: none;
+    border-radius: 20%;
+}
+
+.fixed_button:hover {
+    padding: 30px 30px;
+}

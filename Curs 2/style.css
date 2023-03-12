@@ -1,0 +1,62 @@
+ .item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    width: 100px;
+    height: 5px;
+    background-color: brown;
+}
+
+.item {
+    position: relative;
+}
+
+.item::after {
+    content: "!!";
+}
+
+/* .square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 0px;
+    /*left: 50px;
+} */
+
+/* body {
+    height: 2000px;
+}
+
+.wrapper {
+    position: relative;
+    top: 100px;
+} 
+/* 
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 25px;
+    animation: animationName 5s infinite;
+    position: relative;
+}
+
+@keyframes animationName {
+    0% {
+        background-color: red;
+        left: 0;
+    }
+    50% {
+        background-color: blue;
+        left: 100px;
+    }
+    100% {
+        background-color: red;
+        left: 0;
+    }
+} */
+
