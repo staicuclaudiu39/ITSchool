@@ -1,0 +1,43 @@
+p {
+    color: black;
+    font-size: 12px;
+}
+
+.aqua {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.red {
+    margin: auto;
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border-top-left-radius: 50%;
+    transition: 3s all;
+}
+
+.red:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.red:active {
+    background-color: blue;
+    margin-top: 60px;
+}
+
+.class {
+    display: none;
+    margin-top: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: blueviolet;
+}
+
+.red:hover + .class {
+    display: block;
+}
