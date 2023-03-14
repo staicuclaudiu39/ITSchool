@@ -10,6 +10,12 @@ window.onload = function () {
     let isFormValid = true;
     let isEmpty = false;
     let checkbox = document.querySelector(".checkbox-button");
+    let checkboxError = formBox.querySelector(".checkbox-error");
+    let errorMessage = formBox.querySelector(".error-message");
+    let mainForm = document.querySelector(".main");
+    let hidden = document.querySelector(".hidden");
+    let hiddenMessage;
+
 
     for (let i = 0; i < inputBox.length; i++) {
       if (inputBox[i].value == "") {
@@ -21,26 +27,11 @@ window.onload = function () {
       }
     }
 
-    if (isEmpty) {
-      let errorMessage = formBox.querySelector(".error-message");
-      if (!errorMessage) {
-        errorMessage = document.createElement("p");
-        errorMessage.className = "error-message";
-        errorMessage.textContent = "Please fill in all required fields.";
-        formBox.appendChild(errorMessage);
-      }
-    } else {
-      let errorMessage = formBox.querySelector(".error-message");
-      if (errorMessage) {
-        errorMessage.remove();
-      }
-    }
-
     if (!checkbox.checked) {
-      let checkboxError = formBox.querySelector(".checkbox-error");
       if (!checkboxError) {
         checkboxError = document.createElement("p");
         checkboxError.className = "checkbox-error";
+        checkboxError.style.textAlign = "center";
         checkboxError.textContent = "Please check the 'I'm not a robot' box.";
         formBox.appendChild(checkboxError);
       }
@@ -52,8 +43,38 @@ window.onload = function () {
       }
     }
 
+    if (isEmpty) {
+      if (!errorMessage && !checkboxError) {
+        errorMessage = document.createElement("p");
+        errorMessage.className = "error-message";
+        errorMessage.textContent = "Please fill in all required fields.";
+        errorMessage.style.textAlign = "center";
+        formBox.appendChild(errorMessage);
+      }
+    } else {
+      let errorMessage = formBox.querySelector(".error-message");
+      if (errorMessage) {
+        errorMessage.remove();
+      }
+
+    }
+
     if (isFormValid) {
-      document.getElementById("form").submit();
+      let answers = {
+        firstName: inputBox[0].value,
+        latinFN: inputBox[1].value,
+        lastName: inputBox[2].value,
+        creed: inputBox[3].value,
+        deusVult: inputBox[4].value
+      };
+      console.log(answers);
+      mainForm.style.display = "none";
+      hidden.style.display = "block";
+      hiddenMessage = document.createElement("p");
+      hiddenMessage.className = "hidden";
+      hiddenMessage.textContent = "Welcome to the Order " + answers.firstName + " " + answers.lastName + "!"; 
+      hiddenMessage.style.display = "block"; 
+      hidden.appendChild(hiddenMessage);
     }
   });
 
@@ -62,4 +83,10 @@ window.onload = function () {
       inputBox[i].style.border = "none";
     });
   }
+
+  document.addEventListener("keydown", function (key) {
+    if (key.key == "Enter") 
+      console.log("S-a apasat enter");
+  });
+
 };
