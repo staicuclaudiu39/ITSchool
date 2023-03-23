@@ -2,27 +2,91 @@
   display: flex;
   margin: auto;
   flex-wrap: wrap;
-  gap: 24px;
-  background-color: bisque;
+  gap: 30px;
 }
 
 .card {
+  width: 400px;
+  height: 250px;
+  display: flex;
   margin: 14px;
   border: 1px solid black;
   border-radius: 4px;
+  background-color: bisque;
+  animation: card-fall 1s ease forwards;
+}
+
+.text {
+  text-align: center;
 }
 
 .name {
   font-size: 24px;
-  margin: 14px 0;
+  margin: 20px 0;
 }
 
 .company-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
+  position: relative;
+  
+}
+
+.company-name::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 23px;
+  left: 30%;
+  width: 60px;
+  height: 1px;
+  background-color: black;
 }
 
 .phone {
   font-style: italic;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  border-radius: 100%;
+  border: 1.5px solid black
+}
+
+#delete {
+  display: block;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .card {
+    height: auto;
+    flex-direction: column;
+    animation: none;
+  }
+  .card img {
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  #delete {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+  }
+}
+
+@keyframes card-fall {
+  0% {
+    transform: translateY(-600px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
