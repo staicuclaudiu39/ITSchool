@@ -17,6 +17,8 @@ fetch("https://jsonplaceholder.typicode.com/users").then((respone) => {
   });
 });
 
+
+
 function insertUsers() {
   let wrapper = document.getElementById("wrapper");
   users.forEach((user) => {
