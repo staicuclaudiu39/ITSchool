@@ -12,7 +12,7 @@ const Card = () => {
                 <p className="name">{user.nume + " " + user.prenume}</p>
                 <p className="age">Varsta: {user.varsta}</p>
                 <p className="time">Timp petrecut in EESTEC: {user.timpPetrecut} ani</p>
-                {user.isVerified ? <p className="verified">This user is verified</p> : <p className="not-verified">This user is an impstor</p>}
+                {user.isVerified ? <p className="verified">This user is verified</p> : <p className="not-verified">This user is an impostor</p>}
             </div>
         </div>
       ))}

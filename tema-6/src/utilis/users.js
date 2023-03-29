@@ -4,5 +4,8 @@ export const users = [
 {id: 1, nume:"Claudiu", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: true},
 {id: 2, nume:"Ion", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: false},
 {id: 3, nume:"Vasile", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: false},
-{id: 4, nume:"Mihai", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: true}
+{id: 4, nume:"Mihai", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: true},
+{id: 5, nume:"Gheorghe", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: true},
+{id: 6, nume:"Gheorghe", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 10, isVerified: true},
+{id: 7, nume:"Gheorghe", prenume:"Popescu", poza:"https://via.placeholder.com/600/92c952", varsta: 20, timpPetrecut: 12, isVerified: false},
 ];

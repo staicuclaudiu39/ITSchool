@@ -4,7 +4,10 @@ import Card from './components/Card';
 
 function App() {
   return (
-    <Card/>
+    <div className='MainPage'>
+       <p className='title'>Lista membrilor din EESTEC</p>
+       <Card/>
+    </div>
   );
 }
 
