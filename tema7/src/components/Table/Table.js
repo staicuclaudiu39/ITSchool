@@ -6,11 +6,19 @@ const Table = ({ searchValue = "", addItem }) => {
   const [list, setList] = useState(groceries);
   const [circleColor, setCircleColor] = useState("darkorange");
   const auxListRef = useRef(list);
+  let counterRef = useRef(0);
 
   const deleteItem = (id) => {
+    counterRef.current += 1;
     const newList = list.filter((item) => item.id !== id);
     setList(newList);
   };
+
+  useEffect(() => {
+    if (counterRef.current === 10) {
+      alert("Ai cumparat 10 produse!");
+    }
+  }, [list]);
 
   const filterList = () => {
     return auxListRef.current?.filter((list) =>
@@ -53,6 +61,12 @@ const Table = ({ searchValue = "", addItem }) => {
           Sort
         </button>
       </div>
+      <div className="add-item">
+        <form onSubmit={handleAddItem}>
+          <input type="text" placeholder="Add Item" />
+          <button type="submit">Add</button>
+        </form>
+      </div>
       <div className="Table">
         <table>
           <tr>
@@ -69,10 +83,6 @@ const Table = ({ searchValue = "", addItem }) => {
             );
           })}
         </table>
-        <form onSubmit={handleAddItem}>
-          <input type="text" placeholder="Add Item" />
-          <button type="submit">Add</button>
-        </form>
       </div>
     </>
   );
