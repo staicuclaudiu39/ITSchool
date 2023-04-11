@@ -1,10 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState, useEffect, useRef } from "react";
 import "./Table.css";
 import { groceries } from "../../utilis/list";
-import { useState, useEffect, useRef, useContext } from "react";
 
-const Table = ({ searchValue = "" }) => {
+const Table = ({ searchValue = "", addItem }) => {
   const [list, setList] = useState(groceries);
   const [circleColor, setCircleColor] = useState("darkorange");
   const auxListRef = useRef(list);
@@ -33,12 +31,19 @@ const Table = ({ searchValue = "" }) => {
   };
 
   useEffect(() => {
-    if (list != groceries) {
-      setCircleColor("red");
+    if (list.length !== groceries.length) {
+      setCircleColor("green");
     } else {
       setCircleColor("darkorange");
     }
   }, [list]);
+
+  const handleAddItem = (event) => {
+    event.preventDefault();
+    const newItem = { id: list.length + 1, name: event.target[0].value };
+    setList([...list, newItem]);
+    event.target[0].value = "";
+  };
 
   return (
     <>
@@ -64,6 +69,10 @@ const Table = ({ searchValue = "" }) => {
             );
           })}
         </table>
+        <form onSubmit={handleAddItem}>
+          <input type="text" placeholder="Add Item" />
+          <button type="submit">Add</button>
+        </form>
       </div>
     </>
   );
